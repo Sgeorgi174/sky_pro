@@ -1,0 +1,286 @@
+/*TEST MIXIN для форм */
+
+@mixin formExample() {
+    width: 288px;
+    margin-top: 35px;
+
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #CACDD8;
+    outline: none;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;           
+    color: $colorBlack;
+}
+
+@mixin placeholderExample () {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: $colorBlack
+}
+
+
+
+
+/* HEADER CART */
+
+
+.header__cart {
+    height: 400px;
+    background-image: url(../img/header_cart_back.jpg);
+}
+
+.header__cart-heading {
+    margin-top: 127px;
+}
+
+.header__title {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 70px;
+    color: $colorWhite; 
+}
+
+
+/* MAIN CART */
+
+.cart {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+
+    &__content{
+        grid-column: span 8;
+    }
+
+    &__name {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-bottom: 14px;
+        padding-right: 25px;
+
+        &-title {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: $colorBlack;
+        }
+    }
+
+    &__item{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        border-top: 0.5px solid #CACDD8;
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        gap: 16px;
+        width: 276px;
+
+        &-links{
+            display: flex;
+            gap: 30px;
+        }
+
+        &-title {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            color: $colorBlack;
+        }
+
+        &-text{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: $colorGrey;
+
+        }
+
+        &-price {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: $colorBlack;
+        }
+
+        &-link {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 210%;
+            color: $colorBlack;
+            text-decoration-line: underline;
+
+            &:hover {  /*TEST вложенный HOVER */
+                text-decoration-line: none;
+                color: $colorGrey;
+            }
+        }
+    }
+
+    &__button {
+        width: 200px;
+        height: 37px;
+        border: 1px solid #000000;
+        border-radius: 50px;
+        font-family: 'Montserrat';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #020202;
+        background-color: transparent;
+
+        &:hover {          
+            background-color: $colorBlack;
+            color: $colorWhite;
+        }
+    }
+
+/* FORMS */
+
+    &__input {
+        width: 71px;
+        height: 51px;
+        background: #F7F6F6;
+        border-radius: 6px;
+        text-align: center;
+        border: 0px solid #F7F6F6;
+        outline: none;
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 210%;
+    }
+
+    &__form {
+        grid-column: span 4;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        height: 556px;
+        background: #F7F6F6;
+        border-radius: 20px;
+
+        &-title {
+            padding-top: 42px;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 36px;
+            color: $colorBlack;
+        }
+        
+        &-name {
+            &:focus::placeholder{
+                color: transparent;  /*TEST Скрыть placeholder при фокусе*/
+            }           
+
+            &::placeholder{
+                @include placeholderExample ();
+            }
+
+            @include formExample(); /* TEST MIXIN с вложениями и псевдоклассами */
+        }
+
+        &-tel {
+            margin-top: 44px;
+            &:focus::placeholder{
+                color: transparent;  /*TEST Скрыть placeholder при фокусе*/
+            }           
+
+            &::placeholder{
+                @include placeholderExample ();
+            }
+            
+            @include formExample(); /* TEST MIXIN с вложениями и псевдоклассами */
+        }
+
+        &-address {
+            margin-top: 44px;
+            &:focus::placeholder{
+                color: transparent;  /*TEST Скрыть placeholder при фокусе*/
+            }           
+
+            &::placeholder{
+                @include placeholderExample ();
+            }
+            
+            @include formExample(); /* TEST MIXIN с вложениями и псевдоклассами */
+        }
+
+        &-total {
+            margin-top: 64px;
+
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            color: $colorBlack
+        }
+
+        &-checkout {
+            margin-top: 18px;
+
+            width: 290px;
+            height: 41px;
+
+            border: 1px solid #040404;
+            border-radius: 20px;
+            background-color: transparent;
+
+            &:hover {
+                background-color: $colorBlack;
+                color: $colorWhite;
+            }
+        }
+    }
+}
+
+/* SPECIAL FOR__TEST позиционирования для иконок поверх IMG */
+
+.special__goods {
+    position: relative;
+    // &:hover {
+    //     .add__reaction {    ПЛОХОЕ РЕШЕНИЕ,
+    //         opacity: 1;         МОЖЕТ БЫТЬ РАНДОМНЫЙ КЛИК.
+    //     }
+    // }
+}
+
+.add__reaction {
+    display: flex;
+    gap: 21px;
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    // opacity: 0;
+}
