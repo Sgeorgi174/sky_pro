@@ -228,7 +228,8 @@ body {
 .special__content{
     display: flex;
     gap: 32px;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .special__goods {
@@ -427,8 +428,8 @@ body {
     justify-content: space-between;    
     align-items: flex-start;
 
-    height: 207px;
     padding-top: 32px;
+    padding-bottom: 40px;
     background-color: #F7F6F6;
 }
 
@@ -595,4 +596,5 @@ body {
 
 
 @import 'cart';
+@import 'tablet';
 
