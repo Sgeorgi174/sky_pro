@@ -211,7 +211,6 @@
         }
 
         &-tel {
-            margin-top: 44px;
             &:focus::placeholder{
                 color: transparent;  /*TEST Скрыть placeholder при фокусе*/
             }           
@@ -221,10 +220,10 @@
             }
             
             @include formExample(); /* TEST MIXIN с вложениями и псевдоклассами */
+            margin-top: 44px;
         }
 
         &-address {
-            margin-top: 44px;
             &:focus::placeholder{
                 color: transparent;  /*TEST Скрыть placeholder при фокусе*/
             }           
@@ -234,6 +233,7 @@
             }
             
             @include formExample(); /* TEST MIXIN с вложениями и псевдоклассами */
+            margin-top: 44px;
         }
 
         &-total {
@@ -247,6 +247,7 @@
 
         &-checkout {
             margin-top: 18px;
+            margin-bottom: 148px;
 
             width: 290px;
             height: 41px;

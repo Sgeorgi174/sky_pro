@@ -11,6 +11,7 @@
     .header {
         &__top{
             border-bottom: 0;
+            padding-top: 50px;
         }
 
         &__logo-img {
@@ -85,7 +86,7 @@
     }
 
     .special {
-        margin-top: 32px;
+        margin-top: 48px;
         margin-bottom: 36px;
 
         &__content {            
@@ -224,6 +225,7 @@
 
         &__item {
             padding-top: 18px;
+            padding-bottom: 24px;
         }
 
         &__prev {
@@ -232,6 +234,7 @@
 
         &__info {
             width: 230px;
+            gap: 0;
 
             &-title {
                 font-size: 18px;
@@ -239,22 +242,26 @@
             }
 
             &-text {
+                padding-top: 8px;
                 font-size: 12px;
                 line-height: 15px;
             }
 
             &-price {
+                padding-top: 15px;
                 font-size: 12px;
                 line-height: 15px;
             }
 
             &-link {
+                padding-top: 15px;
                 font-size: 14px;
                 line-height: 210%;
             }
         }
 
         &__buttons {
+            margin-top: 8px;
             display: flex;
             justify-content: space-between;
         }
@@ -268,7 +275,15 @@
 
         &__form {
             grid-column: span 12;
+
+            &-total {
+                margin-top: 68px;
+            }
         }
+    }
+    .catalog__move-mobile {
+        margin-top: 32px;
+        margin-bottom: 64px;
     }
 }
 // Карточки товаров, форма и кнопки на странице корзины //
