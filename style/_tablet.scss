@@ -51,7 +51,7 @@
 
 }
 
-@media (max-width: $widthTabletM) {
+@media (min-width: $widthTabletM) and (max-width: 834px) {
     .center {
         padding-left: 24px;
         padding-right: 24px;
@@ -59,13 +59,13 @@
 
     .special {
         &__goods {
-            width: 345px;
+            width: 44vw;
         }
     }
 
     .catalog {
         &__goods {
-            width: 345px;
+            width: 44vw;
         }
     }
 }

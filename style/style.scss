@@ -113,6 +113,18 @@ body {
     color: $colorWhite;
 }
 
+.header__navM {
+    display: none;
+}
+
+.header__navM-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+}
+
+
 .header__main{
     margin-top: 64px;
 }
@@ -142,7 +154,7 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    text-decoration-line: underline;
+    text-decoration: underline;
     color: $colorWhite;
 }
 
@@ -174,6 +186,8 @@ body {
 
     height: 415px;
     grid-column: span 4;
+    background-size: cover;
+    background-position: center;
 
     font-weight: 600;
     font-size: 34px;
@@ -212,10 +226,10 @@ body {
 
 .special {    
     margin-bottom: 64px;
+    margin-top: 64px;
 }
 
-.special__title {
-    margin-top: 64px;
+.special__title { 
     margin-bottom: 32px;
 }
 
@@ -292,6 +306,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: flex-start;
     align-items: center;
     gap: 32px;
     row-gap: 56px;
@@ -304,6 +319,7 @@ body {
 
 .catalog__goods-prev{
     width: 100%;
+    margin-bottom: 10px;
 }
 
 .add__reaction {
@@ -357,6 +373,7 @@ body {
 
 .catalog__top {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin-top: 64px;
@@ -597,4 +614,5 @@ body {
 
 @import 'cart';
 @import 'tablet';
+@import 'mobile'
 

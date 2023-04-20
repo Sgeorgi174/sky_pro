@@ -1,0 +1,355 @@
+// Общий Адаптив //
+@media (max-width: $widthMobile) {
+    
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    // HOME PAGE //
+
+    .header {
+        &__top{
+            border-bottom: 0;
+        }
+
+        &__logo-img {
+            width: 99px;
+        }
+
+        &__search-input {
+            display: none;
+        }
+
+        &__nav {
+            display: none;
+        }
+
+        &__navM {
+            display: flex;
+        }
+
+        &__main {
+            margin-top: 45px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &-title {
+                font-size: 48px;
+                line-height: 59px;
+                text-align:center;
+            }
+
+            &-slogan {
+                font-size: 16px;
+                line-height: 32px;
+            }
+        }
+
+        &__main-catalog {
+            margin-top: 100px;
+        }
+
+        &__move-link {
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+    }
+
+    .title__section {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .for {
+        margin-top: 32px;
+
+        &__content {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        &__item {
+            grid-column: span 4;
+            height: 375px;
+            font-size: 28px;
+            line-height: 34px;
+
+            &-big {
+                height: 245px;
+            }
+        }
+    }
+
+    .special {
+        margin-top: 32px;
+        margin-bottom: 36px;
+
+        &__content {            
+            row-gap: 36px;
+            justify-content: center;
+        }
+
+        &__goods{
+
+            &-name {
+                font-size: 18px;
+                line-height: 22px;
+            }
+
+            &-disc {
+                font-size: 14px;
+                line-height: 17px;
+                margin-bottom: 8px;
+            }
+
+            &-price {
+
+                &-discount {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+
+                &-full {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+
+    .catalog {
+
+        &__content {           
+            row-gap: 36px;
+            justify-content: center;
+        }
+
+        &__goods{
+
+            &-name {
+                font-size: 18px;
+                line-height: 22px;  
+            }
+
+            &-disc {
+                font-size: 14px;
+                line-height: 17px;
+                margin-bottom: 8px;
+            }
+
+            &-cost {
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+
+        &__move {
+            margin-top: 36px;
+            margin-bottom: 32px;
+        }
+    }
+
+    .footer {
+        justify-content: center;
+        row-gap: 36px;
+        column-gap: 80px;
+        padding-bottom: 32px;
+
+        &__content {
+            column-gap: 100px;
+        }
+
+        &__input-email {
+            width: 268px;
+            height: 46px;
+        }
+
+        &__input-btn {
+            width: 268px;
+            height: 46px;
+        }
+    }
+
+    //CATALOG PAGE //
+
+    .catalog {
+
+        &__top {
+            margin-top: 32px;
+            margin-bottom: 32px;
+            row-gap: 16px;
+        }
+
+        &__nav {
+
+            &-link {
+                font-size: 14px;
+                line-height: 32px;
+            }
+        }
+
+        &__filter {
+
+            &-select {
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+    }
+
+    // CART PAGE //
+
+    .header__cart-heading {
+        margin-top: 100px;        
+    }
+
+    .header__title {
+        font-size: 48px;
+        line-height: 59px;
+        text-align: center;
+    }
+
+    .cart {
+        margin-top: 92px;
+        gap: 0;
+        row-gap: 48px;
+
+        &__name {
+            display: none;
+        }
+
+        &__item {
+            padding-top: 18px;
+        }
+
+        &__prev {
+            display: none;
+        }
+
+        &__info {
+            width: 230px;
+
+            &-title {
+                font-size: 18px;
+                line-height: 22px;
+            }
+
+            &-text {
+                font-size: 12px;
+                line-height: 15px;
+            }
+
+            &-price {
+                font-size: 12px;
+                line-height: 15px;
+            }
+
+            &-link {
+                font-size: 14px;
+                line-height: 210%;
+            }
+        }
+
+        &__buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__button {
+            width: 166px;
+            height: 37px;
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        &__form {
+            grid-column: span 12;
+        }
+    }
+}
+// Карточки товаров, форма и кнопки на странице корзины //
+@media (min-width: 650px) and (max-width: 767px){
+
+    .cart__form{
+        grid-column: span 6;
+    }
+
+    .catalog__content {
+        justify-content: flex-start;
+    }
+
+    .special__content {
+        justify-content: flex-start;
+    }
+
+    .special__goods {
+        width: 45vw;
+    }
+
+    .catalog__goods {
+        width: 45vw;
+    }
+
+    .cart__buttons {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+}
+// Карточки товаров, форма и кнопки на странице корзины //
+@media (min-width: 550px) and (max-width: 649px) {
+    .cart__form {
+        grid-column: span 7;
+    }
+
+    .catalog__content {
+        justify-content: center;
+    }
+
+    .special__content {
+        justify-content: center;
+    }
+
+    .special__goods {
+        width: 91.5vw;
+    }
+
+    .catalog__goods {
+        width: 91.5vw;
+    }
+
+    .cart__buttons {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+}
+// Карточки товаров, форма и кнопки на странице корзины //
+@media (max-width: 549px) {
+    .cart__form {
+        grid-column: span 12;
+    }
+
+    .catalog__content {
+        justify-content: center;
+    }
+
+    .special__content {
+        justify-content: center;
+    }
+
+    .special__goods {
+        width: 91.5vw;
+    }
+
+    .catalog__goods {
+        width: 91.5vw;
+    }
+
+    .cart__buttons {
+        justify-content: space-between;
+    }
+}
+
