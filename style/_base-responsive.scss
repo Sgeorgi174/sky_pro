@@ -1,0 +1,28 @@
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .center {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .special {
+
+        &__content {
+            justify-content: space-between;
+        }
+
+        &__goods {
+            width: 43.5vw;
+        }
+    }
+
+    .catalog {
+
+        &__content {
+            justify-content: space-between;
+        }
+        
+        &__goods {
+            width: 43.5vw;
+        }
+    }
+}

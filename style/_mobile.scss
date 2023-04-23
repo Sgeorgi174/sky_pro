@@ -368,3 +368,51 @@
     }
 }
 
+@media (max-width: 339px) {
+    .header {
+        &__main {
+            &-title {
+                font-size: 42px;
+            }
+        }
+    }
+
+    .footer {
+        &__content {
+            column-gap: 80px;
+        }
+    }
+
+    .cart {
+
+        &__button {
+            width: 140px;
+            height: 31px;
+            font-size: 11px;
+        }
+
+        &__form {
+
+            &-title {
+                font-size: 22px;
+            }
+
+            &-name {
+                width: 250px;
+            }
+
+            &-tel {
+                width: 250px;
+            }
+
+            &-address {
+                width: 250px;
+            }
+
+            &-checkout {
+                width: 250px;
+                height: 35px;
+            }
+        }
+    }
+}
