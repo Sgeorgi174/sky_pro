@@ -96,6 +96,7 @@ legend {
   display: block;
 }
 
+/* Переменные и МИКСИНЫ */
 /*TEST MIXIN для форм */
 @keyframes animButton {
   0%, 100% {
@@ -122,6 +123,7 @@ a {
 
 body {
   font-family: "Montserrat", sans-serif;
+  font-style: normal;
   color: #000;
 }
 
