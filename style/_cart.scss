@@ -103,12 +103,9 @@
             font-size: 14px;
             line-height: 210%;
             color: $colorBlack;
-            text-decoration-line: underline;
-
-            &:hover {  /*TEST вложенный HOVER */
-                text-decoration-line: none;
-                color: $colorGrey;
-            }
+            position: relative;
+            transition: color 0.3s ease-in-out;
+            @include animationUnderLineGrey();
         }
     }
 
@@ -233,6 +230,23 @@
                 color: $colorWhite;
             }
         }
+    }
+}
+
+.special {
+    .special__move {
+        margin-top: 39px;
+        margin-bottom: 64px;
+    }
+    
+    .special__move-link {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $colorBlack;
+        position: relative;
+        transition: color 0.3s ease-in-out;
+        @include animationUnderLineGrey();
     }
 }
 

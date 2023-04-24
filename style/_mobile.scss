@@ -1,4 +1,4 @@
-// Общий Адаптив //
+// Общий мобильный Адаптив //
 @media (max-width: $widthMobile) {
     
     .center {
@@ -60,7 +60,7 @@
 
     }
 
-    .title__section {
+    .main__title {
         font-size: 24px;
         line-height: 29px;
     }
@@ -285,6 +285,10 @@
         margin-top: 32px;
         margin-bottom: 64px;
     }
+    .special__move-mobile {
+        margin-top: 32px;
+        margin-bottom: 64px;
+    }
 }
 // Карточки товаров, форма и кнопки на странице корзины //
 @media (min-width: 650px) and (max-width: 767px){
@@ -367,7 +371,7 @@
         justify-content: space-between;
     }
 }
-
+// Форма, карточки товаров, футер для самый маленьких устройств //
 @media (max-width: 339px) {
     .header {
         &__main {
