@@ -4,3 +4,71 @@ $colorGrey: #888;
 $widthTabletL: 1024px;
 $widthTabletM: 768px;
 $widthMobile: 767px;
+
+@mixin animationUnderLineBlack {
+    &::after {
+        display: block;
+        content: "";
+        background-color:$colorBlack;
+        height: 1px;
+        width: 0%;
+        left: 50%;
+        position: absolute;
+        transition: 0.3s ease-in-out;
+        transform: translateX(-50%);
+    }
+    &:hover{
+        color: $colorBlack;
+    }
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+@mixin animationUnderLineGrey {
+    &::after {
+        display: block;
+        content: "";
+        background-color:$colorGrey;
+        height: 1px;
+        width: 0%;
+        left: 50%;
+        position: absolute;
+        transition: 0.3s ease-in-out;
+        transform: translateX(-50%);
+    }
+    &:hover{
+        color: $colorGrey;
+    }
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+@keyframes animButton {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70% {
+		transform: translateY(-2px);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: translateY(2px);
+	}
+
+	80% {
+		transform: translateY(1.5px);
+	}
+
+	90% {
+		transform: translateY(-1.5px);
+	}
+}

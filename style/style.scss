@@ -111,6 +111,13 @@ body {
     font-size: 16px;
     line-height: 20px;
     color: $colorWhite;
+    transition: color 0.3s linear;
+    position: relative;
+    @include animationUnderLineBlack();
+}
+
+.header__nav-link-notHome {
+    @include animationUnderLineGrey();
 }
 
 .header__navM {
@@ -154,8 +161,10 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    text-decoration: underline;
     color: $colorWhite;
+    position: relative;
+    transition: color 0.3s linear;
+    @include animationUnderLineBlack();
 }
 
 /* MAIN */
@@ -193,8 +202,13 @@ body {
     font-size: 34px;
     line-height: 41px;
     text-align: center;
-
     color: $colorWhite;
+
+    transition: transform 0.1s ease-in-out;
+
+    &:hover {
+        transform: scale(1.01);
+    }
 
 }
 
@@ -248,6 +262,15 @@ body {
 
 .special__goods {
     width: 377px;
+    padding: 10px;
+    transition: all 0.2s ease-in-out;
+    
+    &:hover {
+        box-sizing: border-box;
+        box-shadow: 0px 5px 10px 12px rgba(34, 60, 80, 0.2);
+        border-radius: 0px 0px 10px 10px;
+        transform: scale(1.02);
+    }
 }
 
 .special__goods-prev {
@@ -314,7 +337,16 @@ body {
 
 .catalog__goods {
     width: 377px;
+    padding: 10px;
     position: relative;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        box-sizing: border-box;
+        box-shadow: 0px 5px 10px 12px rgba(34, 60, 80, 0.2);
+        border-radius: 0px 0px 10px 10px;
+        transform: scale(1.02);
+    }
 }
 
 .catalog__goods-prev{
@@ -364,8 +396,10 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    text-decoration-line: underline;
     color: $colorBlack;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    @include animationUnderLineGrey();
 }
 
 /* CATALOG PAGE */
@@ -406,7 +440,10 @@ body {
 }
 
 .catalog__nav-link {
-    color: $colorBlack
+    color: $colorBlack;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    @include animationUnderLineGrey();
 }
 
 .catalog__filter {
@@ -483,6 +520,9 @@ body {
     font-size: 14px;
     line-height: 17px;
     color: $colorGrey;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    @include animationUnderLineBlack();
 }
 
 .footer__contacts {
@@ -504,6 +544,9 @@ body {
     font-size: 14px;
     line-height: 17px;
     color: $colorGrey;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    @include animationUnderLineBlack();
 }
 
 .footer__contacts-social{
@@ -576,38 +619,11 @@ body {
     font-size: 14px;
     line-height: 17px;
     color: $colorBlack;
-}
-
-/* HOVERS */
-
-.main__hover:hover{
-    text-decoration: underline;
-    color: $colorBlack;
-}
-
-.main__hover-nothome:hover {
-    color: $colorGrey;
-    text-decoration-line: underline;
-}
-
-.header__move-link:hover{
-    text-decoration: none;
-    color: $colorBlack;
-}
-
-.catalog__move-link:hover{
-    text-decoration: none;
-    color: $colorGrey;
-}
-
-.footer__input-btn:hover{
-    background-color: $colorBlack;
-    color: $colorWhite;
-}
-
-.catalog__nav-link:hover {
-    text-decoration: underline;
-    color: $colorGrey
+    transition: all 0.3s linear;
+    &:hover {
+        background-color: $colorBlack;
+        color: $colorWhite;
+    }
 }
 
 
