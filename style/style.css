@@ -475,8 +475,8 @@ body {
 
 .add__reaction {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
   display: flex;
   gap: 21px;
 }
@@ -1116,8 +1116,8 @@ body {
   display: flex;
   gap: 21px;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
 }
 
 @media (min-width: 1025px) and (max-width: 1200px) {
